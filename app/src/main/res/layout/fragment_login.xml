@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="164dp"
         android:text="Username or Email"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="30dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <EditText
         android:id="@+id/userName"
@@ -25,7 +25,6 @@
         android:background="@drawable/rounded_bg"
         android:hint="example@gmail.com"
         android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usertv"
@@ -52,28 +51,74 @@
         android:hint="password"
         android:padding="12dp"
         android:paddingStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
         />
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/wrongPassword"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="wrong password"
+        android:textSize="14sp"
+        android:textColor="#D9D9D9"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/forgetPassword"/>
+    <TextView
+        android:id="@+id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password"
+        android:gravity="end"
+        android:textSize="14sp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#648DDB"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintStart_toEndOf="@+id/wrongPassword"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Continue"
+        android:textSize="16sp"
         android:layout_marginHorizontal="16dp"
         android:backgroundTint="#648DDB"
         app:cornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/wrongPassword"
         app:layout_constraintVertical_bias="0.107"
         tools:layout_editor_absoluteX="-16dp" />
+
+    <TextView
+        android:id="@+id/textDont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Don’t have an account?"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="start"
+        android:text="Sign in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="textDont"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
